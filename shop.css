@@ -70,20 +70,69 @@ nav .nav a:hover{
     padding-top:30px;
     
 }
+.card_1{
+    background-image: url('milk/2.JPG');
+}
+.card_2{
+    background-image: url('milk/3.JPG');
+}
+.card_3{
+    background-image: url('milk/4.JPG');
+}
+.card_4{
+    background-image: url('milk/5.JPG');
+}
+.card_5{
+    background-image: url('milk/6.JPG');
+}
+.card_6{
+    background-image: url('milk/1.JPG');
+}
+.card_7{
+    background-image: url('milk/7.JPG');
+}
+.card_8{
+    background-image: url('milk/8.JPG');
+}
+.card_9{
+    background-image: url('milk/9.JPG');
+}
+.card_10{
+    background-image: url('milk/10.JPG');
+}
+.card_11{
+    background-image: url('milk/11.JPG');
+}
+.card_12{
+    background-image: url('milk/12.JPG');
+}
+.card_13{
+    background-image: url('milk/13.JPG');
+}
+.card_14{
+    background-image: url('milk/14.JPG');
+}
+.card_15{
+    background-image: url('milk/15.JPG');
+}
 .card{
     margin-left: 20px;
     width: 300px;
     border:1px solid black;
     height: 400px;
-    background-color:grey;
+    /* background-color:grey; */
+    background-position: center;
+    background-repeat : no-repeat;
+    background-size: 60%; 
     
 }
 .card:hover{
     border:none;
     box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.71);
-    background-color:white;
+    /* background-color:white; */
 
 }
+
 .secondnav{
     position:fixed;
     margin-left: 1280px;
