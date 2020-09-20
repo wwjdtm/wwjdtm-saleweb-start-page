@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 body{
     margin:0 auto;
+    overflow-x: hidden;
 }
 header{
     
@@ -73,4 +74,15 @@ footer{
     color: black;
     height: 40px;
     width: 100%;
+}
+@media screen and (max-width: 700px) {
+    .cardbody{
+        float: none;
+        width: auto;
+    }
+    .nav{
+        display: block;
+        width: auto;
+    }
+
 }
