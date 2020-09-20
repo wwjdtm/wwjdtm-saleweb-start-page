@@ -4,10 +4,8 @@ html{
 }
 body{
     margin:0 auto;
-    x
 }
 header{
-    
     background-image: url('image/sheep.jpg');
     height: 830px;
     background-repeat : no-repeat;
@@ -27,8 +25,8 @@ a{
     font-family: 'Noto Serif', serif;
     color:black;
     text-align: center;
-    margin-left: 400px;
-    margin-top: 30px;
+    margin: 0 auto;
+    padding-top: 20px;
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
@@ -43,32 +41,17 @@ nav, .secondnav{
     margin-top:200px;
     width:200px;
 }
-nav .nav li{
+nav .nav li , .secondnav .nav li{
     list-style: none;
-    height: 40px;
+    height: 50px;
 }
-nav .nav a{
+nav .nav a, .secondnav .nav a{
     text-decoration:none; 
     color:black;
 }
-nav .nav a:hover{
+nav .nav a:hover, .secondnav .nav a:hover{
     color:darkolivegreen;
 }
-.secondnav{
-    margin-left: 400px;
-}
-.secondnav .nav li{
-    list-style: none;
-    height: 40px;
-}
-.secondnav .nav a{
-    text-decoration:none; 
-    color:black;
-}
-.secondnav .nav a:hover{
-    color:darkolivegreen;
-}
-
 footer{
     padding-top:10px;
     text-align: center;
@@ -78,13 +61,9 @@ footer{
     height: 40px;
     width: 100%;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 452px) {
     .cardbody{
         float: none;
-        width: auto;
-    }
-    .nav{
-        display: block;
         width: auto;
     }
 
