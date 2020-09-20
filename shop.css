@@ -126,11 +126,25 @@ nav .nav a:hover{
     background-size: 60%; 
     
 }
-.card:hover{
-    border:none;
-    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.71);
-    /* background-color:white; */
+.card .text{ 
+    width:240px; 
+    height:340px; 
+    background:#000000; 
+    opacity:0; 
+    padding:30px;}
 
+
+.card:hover .text { 
+    opacity:0.6; 
+    text-align:center; 
+    color:#ffffff; }
+
+.card .text strong{
+    font-size: 2.3rem;
+}
+.card .text h2{
+    margin-top: 150px;
+    font-size:2.3rem;
 }
 
 .secondnav{
@@ -161,7 +175,7 @@ footer{
     padding-top:20px;
     text-align: center;
     margin-top: 20px;
-    background-color:darkgreen;
+    background-color:black;
     color: white;
     height: 70px;
     width: 100%;

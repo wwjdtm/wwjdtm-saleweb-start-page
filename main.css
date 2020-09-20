@@ -4,16 +4,16 @@ body{
 }
 header{
     
-    background-image: url('image/bg.JPG');
+    background-image: url('image/sheep.jpg');
     height: 830px;
     background-repeat : no-repeat;
-    background-size : cover;
+    background-size : 60%;
     min-height: 100%;
     background-position: center;
 }
 a{
     text-decoration:none;
-    color:white;
+    color:black;
 }
 .main{
     display: flex;
@@ -21,7 +21,7 @@ a{
 }
 .title{
     font-family: 'Noto Serif', serif;
-    color:white;
+    color:black;
     text-align: center;
     margin-left: 400px;
     margin-top: 30px;
@@ -45,7 +45,7 @@ nav .nav li{
 }
 nav .nav a{
     text-decoration:none; 
-    color:white;
+    color:black;
 }
 nav .nav a:hover{
     color:darkolivegreen;
@@ -59,7 +59,7 @@ nav .nav a:hover{
 }
 .secondnav .nav a{
     text-decoration:none; 
-    color:white;
+    color:black;
 }
 .secondnav .nav a:hover{
     color:darkolivegreen;
