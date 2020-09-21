@@ -183,8 +183,10 @@ footer{
     height: 70px;
     width: 100%;
 }
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
+    .secondnav{
+        display: none;
+    }
     .cardbody, .threecard{
         margin: 0 auto;
         display: block;
@@ -193,21 +195,58 @@ footer{
         width: 250px;
         height: 350px;
     }
+    .card .text{
+        width: 190px;
+        height: 290px;
+    }
+    /* .main{
+        flex-direction: column;
+    } */
+    .card .text h2{
+        margin-top: 20px;
+        font-size:2.1rem;
+    }
     .nav{
-       margin-left: 230px;
-       margin-top:-100px;
-       font-size: 20px;
+        margin-top: 300px;
+        margin-left: -100px;
+    }
+
+}
+
+@media screen and (max-width: 380px) {
+    .secondnav{
+        display: none;
+    }
+    .cardbody, .threecard{
+        margin: 0 auto;
+        display: block;
+    }
+    .card{
+        width: 200px;
+        height: 300px;
+    }
+    .card .text{
+        width: 140px;
+        height: 240px;
+    }
+    .card .text h2{
+        margin-top: 20px;
+        font-size:2.1rem;
+    }
+    .nav{
+        margin-top:100px;
+        margin-left: -100px;
+       font-size: 10px;
     }
     .nav li{
-        text-decoration: dashed;
-        text-align: left;
+        margin-bottom: 3px;
     }
     .title{
-        margin-left: -10px;
-        font-size:30px;
+        font-size:25px;
     }
     .secondnav{
         display: none;
     }
+   
 
 }

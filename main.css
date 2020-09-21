@@ -61,7 +61,7 @@ footer{
     height: 40px;
     width: 100%;
 }
-@media screen and (max-width: 452px) {
+@media screen and (max-width: 768px) {
     .cardbody{
         float: none;
         width: auto;
