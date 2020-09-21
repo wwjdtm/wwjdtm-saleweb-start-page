@@ -71,3 +71,9 @@ footer{
     }
 
 }
+@media screen and (max-width: 380px) {
+    nav li{
+        margin-bottom: 10px;
+        line-height: 20px;
+    }
+}
