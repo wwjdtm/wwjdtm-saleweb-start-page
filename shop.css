@@ -184,13 +184,17 @@ footer{
     width: 100%;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .cardbody, .threecard{
         margin: 0 auto;
         display: block;
     }
+    .card{
+        width: 250px;
+        height: 350px;
+    }
     .nav{
-       margin-left: 150px;
+       margin-left: 230px;
        margin-top:-100px;
        font-size: 20px;
     }
@@ -199,7 +203,11 @@ footer{
         text-align: left;
     }
     .title{
+        margin-left: -10px;
         font-size:30px;
+    }
+    .secondnav{
+        display: none;
     }
 
 }

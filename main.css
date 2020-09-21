@@ -66,5 +66,8 @@ footer{
         float: none;
         width: auto;
     }
+    .nav{
+        margin-left: -30px;
+    }
 
 }
