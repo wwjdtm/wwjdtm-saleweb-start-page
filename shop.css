@@ -189,7 +189,7 @@ footer{
     }
     .cardbody, .threecard{
         margin: 0 auto;
-        display: block;
+        flex-direction: column;
     }
     .card{
         width: 250px;
@@ -216,7 +216,7 @@ footer{
     }
     .cardbody, .threecard{
         margin: 0 auto;
-        display: block;
+        flex-direction: column;
     }
     .card{
         width: 200px;
