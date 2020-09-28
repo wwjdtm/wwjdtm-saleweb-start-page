@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+html{
+    overflow-x: hidden;
+}
+body{
+    margin:0 auto;
+}
+header{
+    background-image: url('image/sheep.jpg');
+    height: 830px;
+    background-repeat : no-repeat;
+    background-size : 60%;
+    min-height: 100%;
+    background-position: center;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+.title{
+    font-family: 'Noto Serif', serif;
+    color:black;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.sign{
+    background-color: black;
+    margin: 0 auto;
+    width: 1000px;
+    height: 800px;
+}
+@media screen and (max-width: 768px) {
+    
+}
+@media screen and (max-width: 380px) {
+    
+}
