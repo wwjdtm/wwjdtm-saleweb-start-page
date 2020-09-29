@@ -36,6 +36,18 @@
         <section class="cardbody">
             <h1 class="cardbodyname">review</h1>
             <article class="review">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>제목</th>
+                            <th>내용</th>
+                            <th>글쓴이</th>
+                        </tr>
+                    </thead>
+                    <tbody class="content">
+
+                    </tbody>
+                </table>
                 
                 
             </article>
@@ -89,17 +101,22 @@
             // return firebase.database().ref().update(updates);
         }
         function getPosts(){
+            
             const postRef = firebase.database().ref('/posts/').once('value',function(snapshot){
                 const postData = Object.entries(snapshot.val());
-                console.log(postData);
+
+                let tableContent = document.querySelector(".content");
+                
 
                 for(let i=0; i<postData.length;i++){
                     const[key,body]=postData[i];
-                    console.log(key,body);
+                    tableContent.innerHTML += "<tr><td>" + body.title + "</td><td>" + body.body + "</td><td>" + body.name + "</td> <tr>"
+            
                 }
             });
             return;
         }
+        getPosts();
 
      </script>
 
