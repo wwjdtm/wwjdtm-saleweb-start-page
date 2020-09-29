@@ -77,14 +77,15 @@
             };
 
             // Get a key for a new Post.
-            var newPostKey = firebase.database().ref().child('posts').push().key;
+            // var newPostKey = firebase.database().ref().child('posts').push().key;
+            const newPostKey = firebase.database().ref().child('posts').push(postData);
 
             // Write the new post's data simultaneously in the posts list and the user's post list.
-            var updates = {};
-            updates['/posts/' + newPostKey] = postData;
-            updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+            // var updates = {};
+            // updates['/posts/' + newPostKey] = postData;
+            // updates['/user-posts/' + uid + '/' + newPostKey] = postData;
 
-            return firebase.database().ref().update(updates);
+            // return firebase.database().ref().update(updates);
         }
 
      </script>
