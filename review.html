@@ -80,7 +80,7 @@
         firebase.initializeApp(firebaseConfig);
         const database = firebase.database();
         
-        function writeNewPost(name,title, body) {
+        function writeNewPost(title, body, name) {
             // A post entry.
             var postData = {
                 name,
