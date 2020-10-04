@@ -66,10 +66,12 @@ nav .nav a:hover{
     color: darkgreen;
     margin-top:40px;
     margin-left: -150px;
+    margin-bottom: 100px;
 }
 .review{
     height: 700px;
     margin:0 auto;
+
     
 }
 
