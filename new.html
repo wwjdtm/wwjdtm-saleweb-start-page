@@ -35,9 +35,9 @@
         <section class="cardbody">
             <h1 class="cardbodyname">review</h1>
             <article class="review">
-                <form name="form1" action="boardSave" method="post">
+                <form name = "form1" method="post" action="review.html">
                     <table border="1" style="width:600px">
-                        <caption>board sample for firebase (Realtime Database)</caption>
+                        
                         <colgroup>
                             <col width='15%' />
                             <col width='*%' />
@@ -60,6 +60,8 @@
                         </tbody>
                     </table>
                     <a href="./review.html" onclick="form1.submit()">저장</a>
+
+                    
                 </form>
                 
                 
@@ -70,6 +72,45 @@
     <footer>
        @iwantyun
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+     <script>
+    // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBwfkEz3R1kMrxK5lgabYM4sCy3ncr3zoM",
+            authDomain: "milkkk.firebaseapp.com",
+            databaseURL: "https://milkkk.firebaseio.com",
+            projectId: "milkkk",
+            storageBucket: "milkkk.appspot.com",
+            messagingSenderId: "318726758078",
+            appId: "1:318726758078:web:c4403540a789666b4b48ef"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+        
+        function writeNewPost(title, body, name) {
+            // A post entry.
+            var postData = {
+                name,
+                title,
+                body,
+                
+            };
+            const newPostKey = firebase.database().ref().child('posts').push(postData);
+
+        }
+        
+        // post() {
+        //     var title = document.getElementById("title").value;
+        //     var body = document.getElementById("body").value;
+        //     var name = document.getElementById("name").value;
+        // writePost(title, body, name);
+        // };
+
+
+
+     </script>
 
    
 
