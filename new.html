@@ -1,34 +1,82 @@
 <!DOCTYPE html>
+<html lang="kr">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>board sample for firebase (Realtime Database)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Milkkk</title>
+    <link rel="stylesheet" type="text/css" href="review.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
 </head>
+
+<body>
+   
+    <section class="main">
+
+        <!-- <div class="fix"> -->
+                <div class="title">
+                    M<br>I<br>L<br>K<br>O<br>W
+                </div>
+                <nav>
+                    <ul >
+                        <li role="presentation"  ><a href="./about.html">about me</a></li>
+                        <li role="presentation" ><a href="./shop.html">milk shop </a></li>
+                        <li role="presentation" class="active"><a href="./review.html">review</a></li>
+                        
+                        </li>
+                    </ul>
+
+                </nav>
+        <!-- </div> -->
+        
+        <section class="cardbody">
+            <h1 class="cardbodyname">review</h1>
+            <article class="review">
+                <form name="form1" action="boardSave" method="post">
+                    <table border="1" style="width:600px">
+                        <caption>board sample for firebase (Realtime Database)</caption>
+                        <colgroup>
+                            <col width='15%' />
+                            <col width='*%' />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>Title</td>
+                                <td><input type="text" name="title" size="70" maxlength="250" ></td>
+                            </tr>
+                            <tr>
+                                <td>Memo</td>
+                                <td><textarea name="body" rows="9" cols="60"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>Writer</td>
+                                <td><input type="text" name="name" size="70" maxlength="20" ></td>
+                            </tr>
+                            
+                           
+                        </tbody>
+                    </table>
+                    <a href="./review.html" onclick="form1.submit()">저장</a>
+                </form>
+                
+                
+            </article>
+        </section>
+        
+    </section>
+    <footer>
+       @iwantyun
+    </footer>
+
+   
+
  
-    <form name="form1" action="boardSave" method="post">
-        <table border="1" style="width:600px">
-            <caption>board sample for firebase (Realtime Database)</caption>
-            <colgroup>
-                <col width='15%' />
-                <col width='*%' />
-            </colgroup>
-            <tbody>
-                <tr>
-                    <td>Writer</td>
-                    <td><input type="text" name="name" size="20" maxlength="20" value="<%=row.name%>"></td>
-                </tr>
-                <tr>
-                    <td>Title</td>
-                    <td><input type="text" name="title" size="70" maxlength="250" value="<%=row.title%>"></td>
-                </tr>
-                <tr>
-                    <td>Memo</td>
-                    <td><textarea name="body" rows="5" cols="60"><%=row.body%></textarea></td>
-                </tr>
-            </tbody>
-        </table>
-        <a href="#" onclick="form1.submit()">저장</a>
-        <input type="hidden" name="brdno" value="<%=row.brdno%>">
-        <input type="hidden" name="brddate" value="<%=row.brddate%>">
-    </form>  
+
 </body>
+
+
 </html>
+
