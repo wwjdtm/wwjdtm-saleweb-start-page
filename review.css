@@ -28,6 +28,10 @@ a{
     padding-left: 30px;
     padding-top:100px;
 }
+.title a:link { color: black; text-decoration: none;}
+.title a:visited { color: black; text-decoration: none;}
+.title a:hover { color: black; text-decoration: none;}
+
 nav{
     margin-left: 100px;
     position:fixed;
@@ -58,6 +62,11 @@ nav a:hover{
     
     
 }
+.review span{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
 .cardbodyname{
     text-align: center;
     font-family: 'Noto Serif', serif;
