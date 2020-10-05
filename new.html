@@ -35,7 +35,7 @@
         <section class="cardbody">
             <h1 class="cardbodyname">review</h1>
             <article class="review">
-                <form name = "form1" method="post" action="review.html">
+                <form id="creatpost" method="post">
                     <table border="1" style="width:600px">
                         
                         <colgroup>
@@ -59,9 +59,8 @@
                            
                         </tbody>
                     </table>
-                    <a href="./review.html" onclick="form1.submit()">저장</a>
+                    <a href="./review.html"><input type="button" sonclick="newpost()" value="작성"></a>
 
-                    
                 </form>
                 
                 
@@ -101,13 +100,13 @@
 
         }
         
-        // post() {
-        //     var title = document.getElementById("title").value;
-        //     var body = document.getElementById("body").value;
-        //     var name = document.getElementById("name").value;
-        // writePost(title, body, name);
-        // };
+        function newpost(){
+            var title = creatpost.title.value;
+            var body = creatpost.body.value;
+            var name = creatpost.name.value;
+            writeNewPost(title, body, name);
 
+        }
 
 
      </script>
