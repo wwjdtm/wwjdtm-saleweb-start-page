@@ -129,7 +129,7 @@ footer{
 }
 
 @media screen and (max-width: 380px) {
-    .secondnav{
+    .secondnav, nav, .title{
         display: none;
     }
     .cardbody, .threecard{
@@ -153,18 +153,6 @@ footer{
     .card .text h2{
         margin-top: 20px;
         font-size: 25px;
-    }
-    nav{
-        display: none;
-    }
-    .nav li{
-        margin-bottom: 3px;
-    }
-    .title{
-        font-size:25px;
-    }
-    .secondnav{
-        display: none;
     }
    
 
