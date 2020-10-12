@@ -79,7 +79,7 @@ nav a:hover{
 }
 .review{
     width: 1000px;
-    height: 700px;
+    /* height: 700px; */
     margin:0 auto;
 }
 #btn{
@@ -102,12 +102,12 @@ footer{
     width: 100%;
 }
 @media screen and (max-width: 768px) {
-  
+ 
 
 }
 
 @media screen and (max-width: 380px) {
-    
+  
    
 
 }
