@@ -112,7 +112,7 @@
                 let tableContent = document.querySelector(".content");
                 
 
-                for(let i=0; i<postData.length;i++){
+                for(let i=postData.length-1; i>postData.length-12;i--){
                     const[key,body]=postData[i];
                     tableContent.innerHTML += "<tr><td>" + body.title + "</td><td>" + body.body + "</td><td>" + body.name + "</td> <tr>"
             
