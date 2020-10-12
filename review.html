@@ -39,6 +39,9 @@
         <section class="cardbody">
             <h1 class="cardbodyname">review</h1>
             <article class="review">
+                <hr>
+                <span>🍫초코우유🍫 후기<br></span>
+                <hr>
                 <table class="table table-bordered table-hover" id="data-container">
                     <thead>
                         <tr>
@@ -52,7 +55,24 @@
                     </tbody>
                 </table>
                 <a href="./new.html">글쓰기</a>
-                <div id="pagination"></div>
+                <hr>
+                <span>🍌바나나우유🍌 후기<br></span>
+                <hr>
+                <table class="table table-bordered table-hover" id="data-container">
+                    <thead>
+                        <tr>
+                            <th>제목</th>
+                            <th>내용</th>
+                            <th>글쓴이</th>
+                        </tr>
+                    </thead>
+                    <tbody class="contentbanana">
+
+                    </tbody>
+                </table>
+                <a href="./bananareviewnew.html">글쓰기</a>
+                
+              
                 
                 
             </article>
@@ -94,16 +114,20 @@
                 
             };
 
-            // Get a key for a new Post.
-            // var newPostKey = firebase.database().ref().child('posts').push().key;
             const newPostKey = firebase.database().ref().child('posts').push(postData);
 
-            // Write the new post's data simultaneously in the posts list and the user's post list.
-            // var updates = {};
-            // updates['/posts/' + newPostKey] = postData;
-            // updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+        }
+        function bawriteNewPost(title, body, name) {
+            // A post entry.
+            var postData = {
+                name,
+                title,
+                body,
+                
+            };
 
-            // return firebase.database().ref().update(updates);
+            const newPostKey = firebase.database().ref().child('banana').push(postData);
+
         }
         function getPosts(){
             
@@ -125,16 +149,11 @@
 
 
         getPosts();
-        
-
 
         
-
-
-
-
-
+        
      </script>
+      
 
  
 

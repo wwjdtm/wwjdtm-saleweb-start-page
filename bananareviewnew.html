@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Milkkk</title>
+    <link rel="stylesheet" type="text/css" href="review.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+   
+    <section class="main">
+
+        <!-- <div class="fix"> -->
+                <div class="title">
+                    M<br>I<br>L<br>K<br>O<br>W
+                </div>
+                <nav>
+                    <ul >
+                        <li role="presentation"  ><a href="./about.html">about me</a></li>
+                        <li role="presentation" ><a href="./shop.html">milk shop </a></li>
+                        <li role="presentation" class="active"><a href="./review.html">review</a></li>
+                        
+                        </li>
+                    </ul>
+
+                </nav>
+        <!-- </div> -->
+        
+        <section class="cardbody">
+            <h1 class="cardbodyname">review</h1>
+            <article class="review">
+                <form id="creatpost" method="post">
+                    <table  style="width:900px; height: 500px;">
+                        
+                        <colgroup>
+                            <col width='15%' />
+                            <col width='*%' />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>Title</td>
+                                <td><input type="text" name="title" size="80" maxlength="250" ></td>
+                            </tr>
+                            <tr>
+                                <td>Memo</td>
+                                <td><textarea name="body" rows="9" cols="80"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>Writer</td>
+                                <td><input type="text" name="name" size="80" maxlength="20" ></td>
+                            </tr>
+                            
+                           
+                        </tbody>
+                    </table>
+                    <a href="./review.html"><input type="button" id="btn" onclick="newpost()" value="WRITE"></a>
+
+                </form>
+                
+                
+            </article>
+        </section>
+        
+    </section>
+    <footer>
+       @iwantyun
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+     <script>
+    // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBwfkEz3R1kMrxK5lgabYM4sCy3ncr3zoM",
+            authDomain: "milkkk.firebaseapp.com",
+            databaseURL: "https://milkkk.firebaseio.com",
+            projectId: "milkkk",
+            storageBucket: "milkkk.appspot.com",
+            messagingSenderId: "318726758078",
+            appId: "1:318726758078:web:c4403540a789666b4b48ef"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+        
+        function writeNewPost(title, body, name) {
+            // A post entry.
+            var postData = {
+                name,
+                title,
+                body,
+                
+            };
+            const newPostKey = firebase.database().ref().child('banana').push(postData);
+
+        }
+        
+        function newpost(){
+            var title = creatpost.title.value;
+            var body = creatpost.body.value;
+            var name = creatpost.name.value;
+            writeNewPost(title, body, name);
+
+        }
+
+
+     </script>
+
+   
+
+ 
+
+</body>
+
+
+</html>
+
