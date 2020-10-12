@@ -102,12 +102,70 @@ footer{
     width: 100%;
 }
 @media screen and (max-width: 768px) {
- 
+    .title{
+        display: none;
+    }
+    .secondnav{
+        display: none;
+    }
+    .cardbody, .threecard{
+        margin-left: 100px;
+        flex-direction: column;
+    }
+    .card{
+        width: 250px;
+        height: 350px;
+    }
+    .review{
+        width: 500px;
+    }
+
+    nav{
+        flex-direction: column;
+        margin-top: 300px;
+        margin-left: -30px;
+    }
 
 }
 
 @media screen and (max-width: 380px) {
-  
+    .secondnav{
+        display: none;
+    }
+    .cardbody, .threecard{
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    .review{
+        width: 200px;
+    }
+    .card{
+        width: 200px;
+        height: 300px;
+    }
+    .card .text{
+        width: 140px;
+        height: 240px;
+    }
+    .card .text strong{
+        font-size: 25px;
+    }
+    .card .text h2{
+        margin-top: 20px;
+        font-size: 25px;
+    }
+    nav{
+        display: none;
+    }
+    .nav li{
+        margin-bottom: 3px;
+    }
+    .title{
+        font-size:25px;
+    }
+    .secondnav{
+        display: none;
+    }
    
 
 }
