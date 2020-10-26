@@ -2,6 +2,13 @@
 html{
     overflow-x: hidden;
 }
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+.dark-mode button,.dark-mode tr,.dark-mode a,.dark-mode .title a:visited {background-color:black; color: white;}
+
 body{
     margin:0 auto;
 }
@@ -15,7 +22,6 @@ a{
     flex-direction: row;
     /* position:fixed; */
 }
-
 .title{
     position:fixed;
     margin-left:20px;
@@ -24,12 +30,17 @@ a{
     font-weight: bold;
     font-size: 40px;
     width:100px;
-    color:black;
     padding-left: 30px;
     padding-top:100px;
 }
+
+button{
+    font-weight: 700;
+    background-color: aliceblue;
+}
+
 .title a:link { color: black; text-decoration: none;}
-.title a:visited { color: black; text-decoration: none;}
+.title a:visited { color: black;text-decoration: none;}
 .title a:hover { color: black; text-decoration: none;}
 
 nav{

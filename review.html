@@ -22,10 +22,10 @@
 
         <!-- <div class="fix"> -->
                 <div class="title">
-                    <a href="./index.html"> M<br>I<br>L<br>K<br>O<br>W</a>
+                    <a href="./index.html"> M<br>I<br>L<br>K<br>O<br>W </a>
                 </div>
                 <nav>
-                    <ul >
+                    <ul>
                         <li role="presentation"  ><a href="./about.html">about me</a></li>
                         <li role="presentation" ><a href="./shop.html">milk shop </a></li>
                         <li role="presentation" class="active"><a href="./review.html">review</a></li>
@@ -39,6 +39,7 @@
         <section class="cardbody">
             <h1 class="cardbodyname">review</h1>
             <article class="review">
+                <button onclick="myFunction()">dark mode</button>
                 <hr>
                 <span>🍫초코우유🍫 후기<br></span>
                 <hr>
@@ -82,6 +83,12 @@
     <footer>
        @iwantyun
     </footer>
+    <script>
+        function myFunction() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+    </script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 
