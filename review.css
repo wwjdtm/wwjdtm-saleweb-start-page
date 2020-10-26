@@ -129,7 +129,10 @@ footer{
 }
 
 @media screen and (max-width: 380px) {
-    .secondnav, nav, .title{
+    nav, ul{
+        display: none;
+    }
+    .secondnav,.title{
         display: none;
     }
     .cardbody, .threecard{
