@@ -20,25 +20,59 @@
             Milkow </a>
         </section>
 
-        <div class="sign">
-            <table class="table table-bordered table-hover">
-                <thead>
-                    <tr>
-                        <th>제목</th>
-                        <th>내용</th>
-                        <th>글쓴이</th>
-                    </tr>
-                </thead>
-                <tbody class="content">
+        <section class="card">
+            <div class="card-content">
+                로그인상태 : 
+                <span id ="AUTH_STATE" class="blue-text">(인증되지않음)</span>
+            </div>
+            <div class = "card-action">
+                <button id="BTN_GOOGLE_LOGIN" type="button" class="btn indigo">구글 인증</button>
 
-                </tbody>
-            </table>
-            <a href="./new.html">글쓰기</a>
-
-        </div>
+            </div>
+        </section>
 
         
     </section>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBwfkEz3R1kMrxK5lgabYM4sCy3ncr3zoM",
+    authDomain: "milkkk.firebaseapp.com",
+    databaseURL: "https://milkkk.firebaseio.com",
+    projectId: "milkkk",
+    storageBucket: "milkkk.appspot.com",
+    messagingSenderId: "318726758078",
+    appId: "1:318726758078:web:c4403540a789666b4b48ef"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  $("#BTN_GOOGLE_LOGIN").click(function(){
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().signInWithPopup(provider).then(function(result){
+          $('#AUTH_STATE').text(result.user.displayName + "님 로그인 하셨습니다.");
+      }).catch(function(error){
+          alert(error.message)
+      });
+  });
+
+
+
+
+
+
+</script>
 
 </body>
 
