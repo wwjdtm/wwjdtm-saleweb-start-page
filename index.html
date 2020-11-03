@@ -4,53 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Milkow</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+    <title>Milkkk</title>
+    <link rel="stylesheet" type="text/css" href="shop2.css">
+    <script src="jquery-1.9.1.min.js"></script>
+    <script src="TweenMax.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
    
 
 
 </head>
-
 <body>
-    <header>
-        <section class="main">
-            <nav>
-                <ul class="nav nav-pills nav-stacked">
-                    <li role="presentation" ><a href="./about.html">about me</a></li>
-                    <li role="presentation" ><a href="./shop.html">milk shop</a></li>
-                    <li role="presentation"><a href="./review.html">review</a></li>
-                    
-                    </li>
-                  </ul>
+    <main>
+        <div class="content">
+                <nav>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role="presentation" ><a href="./about.html">about me</a></li>
+                        <li role="presentation" ><a href="./shop.html">milk shop</a></li>
+                        <li role="presentation"><a href="./review.html">review</a></li>
+                        
+                        </li>
+                      </ul>
+        
+                </nav>
     
-            </nav>
-            <section class="title"><a href="./index.html">
-                Milkow </a>
-            </section>
-            <aside class="secondnav">
-                <ul class="nav nav-pills nav-stacked">
-                    <li role="presentation" class="active"></li>
-                  </ul>
-    
-            </aside>
+          <svg class="bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 1000" width="500" height="500" preserveAspectRatio="none">
+            <path class="wobble" d="M0 0 C 250 0, 500 0, 500 0 C 500 250, 500 500, 500 500 C 250 500, 0 500, 0 500 C 0 250, 0 500, 0 0 Z" fill="black" />
+          </svg>
 
+          <h1><a href="./index.html">
+            Milkow </a>
+          <h1>
             
-        </section>
-       
+        </div>
+        <div class="sheep">
+            <img src="image/sheep.jpg" style="margin-left:450px; height:700px; width: 500px;">
+        </div>
+        <footer>
+            @iwantyun
+        </footer>
+    </main>
 
-    </header>
-    <footer>
-        @iwantyun
-     </footer>
 
+    <script>
+        var main = document.getElementsByTagName('main')[0];
+        var wobbles = document.getElementsByClassName('wobble'),curve = 500;
 
-    <!-- <footer>
-        푸우터터터터터
-    </footer> -->
+        function setWobble(){
+            for (var x = 0; x < wobbles.length; x++){wobbles[x].setAttribute('d', 'M0 0 C 250 0, 500 0, 500 0 C 500 250, 500 500, 500 500 C 250 ' + curve + ', 0 500, 0 500 C 0 250, 0 500, 0 0 Z');}
+            requestAnimationFrame(setWobble);
+        };setWobble();
+        
+        main.addEventListener('scroll', trackScroll);
+
+        var scrollSpeed;
+        var curveAmount;
+
+        function trackScroll(){
+            scrollSpeed = checkScrollSpeed();
+            curveAmount = 500 + scrollSpeed*2;
+            
+            if (curveAmount > 500){
+                curveAmount = Math.min(curveAmount, 750);
+            } else {
+                curveAmount = Math.max(curveAmount, 250);
+            }
+            
+            TweenMax.to(window, 2.2, {ease: Elastic.easeOut.config(1, 0.3), curve: curveAmount});
+            
+            if(scrollSpeed != 0){requestAnimationFrame(trackScroll);}
+        }
+
+        var lastPos,
+            newPos,
+            timer,
+            delta, 
+            delay = 100;
+        console.log("ddd")
+
+        var checkScrollSpeed = (function(){
+  
+            function clear() {
+            lastPos = null;
+            delta = 0;
+            }
+            console.log("aa1")
+  
+            clear();
+            console.log("aa2")
+        
+            return function(){
+                newPos = main.scrollTop;
+                if ( lastPos != null ){delta = newPos -  lastPos;}
+                lastPos = newPos;
+                clearTimeout(timer);
+                timer = setTimeout(clear, delay);
+                return delta;
+            };
+            
+            console.log("aa3")
+        })();
+    </script>
 
 </body>
-
-
 </html>
